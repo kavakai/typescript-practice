@@ -1,7 +1,13 @@
 import React from "react";
-import "./styles.css"
+import "./styles.css";
 
-const TextBox: React.FC = () => {
+interface Props {
+  todo: string;
+  setTodo: React.Dispatch<React.SetStateAction<string>>;
+}
+
+
+const TextBox = ({ todo, setTodo }: Props) => {
   return (
     <div>
       <form className="input">
