@@ -4,13 +4,14 @@ import "./styles.css";
 interface Props {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
+  addTodos: (e:React.FormEvent) => void;
 }
 
 
-const TextBox:React.FC<Props>= ({ todo, setTodo }) => {
+const TextBox:React.FC<Props>= ({ todo, setTodo, addTodos }) => {
   return (
     <div>
-      <form className="input">
+      <form className="input" onSubmit={addTodos}>
         <input 
           type="input" 
           placeholder="Enter Task Here" 
