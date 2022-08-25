@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import TextBox from './components/TextBox';
 import { Todo } from './TodoModel';
+import CardSection from './components/CardSection';
 
 const App: React.FC = () => {
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading">Taskify</span>
       <TextBox todo={todo} setTodo={setTodo} addTodos={addTodos}/>
+      <CardSection todos={todos} setTodos={setTodos}/>
     </div>
   );
 }
