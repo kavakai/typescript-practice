@@ -5,8 +5,8 @@ import TodoCard from "./TodoCard";
 
 
 interface Props {
-  todos:Todo[];
-  setTodos:React.Dispatch<React.SetStateAction<Todo[]>>;
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
 const CardSection: React.FC<Props> = ({ todos, setTodos }) => {
@@ -14,9 +14,8 @@ const CardSection: React.FC<Props> = ({ todos, setTodos }) => {
   return(
     <section className="todos">
       {todos.map((todo) => {
-        <TodoCard 
-          todo={todo.todo}
-          isDone={todo.isDone}
+        return <TodoCard 
+          todo={todo}
           key={todo.id}
           todos={todos}
           setTodos={setTodos}
