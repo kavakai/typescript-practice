@@ -19,7 +19,7 @@ const TodoCard: React.FC<Props> = ({ todo, todos, setTodos }) => {
   }
 
   const handleDelete = (id: number) => {
-
+    setTodos(todos.filter(todo => todo.id !== id))
   }
 
   const handleEdit = (id: number) => {
